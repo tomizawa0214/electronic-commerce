@@ -3,63 +3,77 @@
 
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  <title>ECサイト</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>焼きたてパン</title>
+  </head>
 
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="/">ECサイト</a>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/">ホーム</a>
-        </li>
-        {% if user.is_authenticated %}
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'profile' %}">プロフィール</a>
+  <body>
+    <nav class="nav navbar">
+      <div class="container">
+        <a href="/">
+          <img src="{% static 'img/logo.svg' %}" alt="">
+        </a>
+        <ul class="navbar-nav">
+          <li>
+            <a class="nav-link" href="/">
+              <i class="fas fa-home fa-fw" aria-hidden="true"></i>トップページ
+            </a>
           </li>
-          <li class="nav-item">
+          {% if user.is_authenticated %}
+          <li>
+            <a class="nav-link" href="{% url 'profile' %}">
+              <i class="fas fa-user fa-fw" aria-hidden="true"></i>マイページ</a>
+          </li>
+          <li>
             <a class="nav-link" href="{% url 'order' %}">
-              カート
+              <i class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i>カート
               <span class="badge badge-pill badge-warning">
                 {{ request.user|itemCount }}
               </span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_logout' %}">ログアウト</a>
+          <li>
+            <a class="nav-link" href="{% url 'account_logout' %}">
+              <i class="fas fa-sign-out-alt fa-fw" aria-hidden="true"></i>ログアウト
+            </a>
           </li>
-        {% else %}
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_signup' %}">サインアップ</a>
+          {% else %}
+          <li>
+            <a class="nav-link" href="{% url 'account_signup' %}">
+              <i class="fas fa-user-plus fa-fw" aria-hidden="true"></i>会員登録
+            </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_login' %}">ログイン</a>
+          <li>
+            <a class="nav-link" href="{% url 'account_login' %}">
+              <i class="fas fa-sign-in-alt fa-fw" aria-hidden="true"></i>ログイン
+            </a>
           </li>
-        {% endif %}
-      </ul>
-    </div>
-  </nav>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
 
-  <main>
-    <div class="container">
-      {% block content %}
-      {% endblock %}
-    </div>
-  </main>
+    <main>
+      <div class="container">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </main>
 
-  <footer class="py-2 bg-dark">
-    <p class="m-0 text-center text-white">Copyright &copy; Django Startup 2020</p>
-  </footer>
+    <footer class="py-2 bg-dark">
+      <p class="m-0 text-center text-white">Copyright &copy; Django Startup 2020</p>
+    </footer>
 
-  {% block extra_js %}
-  {% endblock %}
-  
-</body>
-
+    {% block extra_js %}
+    {% endblock %}
+    <script src="https://kit.fontawesome.com/a29680248f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
 </html>
