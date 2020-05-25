@@ -127,3 +127,34 @@ body {
   font-weight: 600;
   letter-spacing: 1px;
 }
+
+footer {
+  width: 100%;
+  font-size: 12px;
+  background: #323232;
+}
+
+footer .footer {
+  max-width: 1200px;
+}
+
+footer .footer__item {
+  text-align: center;
+}
+
+footer .footer__item a {
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+footer .footer__item a:hover {
+  opacity: .5;
+}
+
+footer .footer p {
+  margin: 0;
+  text-align: center;
+  color: #fff;
+}
