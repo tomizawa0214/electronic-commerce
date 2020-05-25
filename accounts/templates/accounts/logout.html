@@ -1,15 +1,13 @@
 {% extends "app/base.html" %}
 
 {% block content %}
-<div class="card card-auth my-5 mx-auto">
-  <div class="card-body">
-    <p class="card-title text-center">ログアウトしますか？</p>
-    <form method="post" class="form-auth">
-      {% csrf_token %}
-      <div class="button mx-auto">
-        <button class="btn btn-lg btn-warning btn-block mx-auto" type="submit">ログアウト</button>
-      </div>
-    </form>
-  </div>
+<div class="logout col-12">
+  <p>ログアウトしますか？</p>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn rounded-pill">
+      <i class="fas fa-sign-out-alt fa-fw" aria-hidden="true"></i>ログアウト
+    </button>
+  </form>
 </div>
 {% endblock %}

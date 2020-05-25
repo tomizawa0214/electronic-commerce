@@ -1,0 +1,40 @@
+.signup {
+  max-width: 500px;
+  margin: 0 auto;
+  h5 {
+    margin: 10px auto 30px;
+    text-align: center;
+  }
+  &__form {
+    text-align: center;
+    margin: 0px auto 80px;
+    &--item {
+      margin-bottom: 15px;
+      &--name {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+    }
+    button {
+      position: relative;
+      width: 50%;
+      margin-top: 30px;
+      color: #fff;
+      background: #e8435f;
+      box-shadow: 0 3px 0 #AC1531;
+      border: 0;
+      &:hover {
+        color: #fff;
+        opacity: .7;
+      }
+      &:active {
+        top: 3px;
+        box-shadow: none;
+      }
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+}

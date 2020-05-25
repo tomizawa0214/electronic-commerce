@@ -212,3 +212,97 @@ footer .footer p {
 .login__form button:focus {
   outline: 0;
 }
+
+.logout {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.logout p {
+  margin: 10px auto 20px;
+  text-align: center;
+}
+
+.logout form {
+  text-align: center;
+  margin: 0px auto 80px;
+}
+
+.logout form button {
+  position: relative;
+  width: 50%;
+  margin-top: 30px;
+  color: #fff;
+  background: #e8435f;
+  -webkit-box-shadow: 0 3px 0 #AC1531;
+          box-shadow: 0 3px 0 #AC1531;
+  border: 0;
+}
+
+.logout form button:hover {
+  color: #fff;
+  opacity: .7;
+}
+
+.logout form button:active {
+  top: 3px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.logout form button:focus {
+  outline: 0;
+}
+
+.signup {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.signup h5 {
+  margin: 10px auto 30px;
+  text-align: center;
+}
+
+.signup__form {
+  text-align: center;
+  margin: 0px auto 80px;
+}
+
+.signup__form--item {
+  margin-bottom: 15px;
+}
+
+.signup__form--item--name {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.signup__form button {
+  position: relative;
+  width: 50%;
+  margin-top: 30px;
+  color: #fff;
+  background: #e8435f;
+  -webkit-box-shadow: 0 3px 0 #AC1531;
+          box-shadow: 0 3px 0 #AC1531;
+  border: 0;
+}
+
+.signup__form button:hover {
+  color: #fff;
+  opacity: .7;
+}
+
+.signup__form button:active {
+  top: 3px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.signup__form button:focus {
+  outline: 0;
+}

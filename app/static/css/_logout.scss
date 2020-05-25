@@ -1,0 +1,32 @@
+.logout {
+  max-width: 500px;
+  margin: 0 auto;
+  p {
+    margin: 10px auto 20px;
+    text-align: center;
+  }
+  form {
+    text-align: center;
+    margin: 0px auto 80px;
+    button {
+      position: relative;
+      width: 50%;
+      margin-top: 30px;
+      color: #fff;
+      background: #e8435f;
+      box-shadow: 0 3px 0 #AC1531;
+      border: 0;
+      &:hover {
+        color: #fff;
+        opacity: .7;
+      }
+      &:active {
+        top: 3px;
+        box-shadow: none;
+      }
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+}
