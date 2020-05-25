@@ -1,26 +1,26 @@
 .nav {
-  max-width: 1200px;
-  height: 120px;
-  margin: 10px auto;
-  padding: 0;
-  img {
-    transition: .3s ease;
-    &:hover {
-      opacity: .5;
-    }
-  }
-  ul {
-    justify-content: space-evenly;
-    li {
-      a {
-        padding: 0;
-        color: #000;
-        transition: .3s ease;
-        &:hover {
-          opacity: .5;
-        }
-        i {
-          margin-right: 5px;
+  padding: 20px 0;
+  &__wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    ul {
+      width: 100%;
+      justify-content: space-between;
+      li {
+        a {
+          text-align: center;
+          letter-spacing: 3px;
+          color: #000;
+          transition: .3s ease;
+          &:hover {
+            opacity: .5;
+          }
+          span {
+            margin-top: 5px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+          }
         }
       }
     }

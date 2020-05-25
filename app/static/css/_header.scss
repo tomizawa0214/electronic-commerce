@@ -1,0 +1,28 @@
+.header {
+  max-width: 1200px;
+  height: 120px;
+  margin: 10px auto;
+  padding: 0;
+  img {
+    transition: .3s ease;
+    &:hover {
+      opacity: .5;
+    }
+  }
+  ul {
+    justify-content: space-evenly;
+    li {
+      a {
+        padding: 0;
+        color: #000;
+        transition: .3s ease;
+        &:hover {
+          opacity: .5;
+        }
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

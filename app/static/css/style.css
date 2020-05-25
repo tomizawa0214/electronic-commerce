@@ -6,40 +6,40 @@ body {
   font-family: "Montserrat", "Roboto", "游ゴシック体", "Yu Gothic", YuGothic, "游ゴシック", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", MeiryoKe_PGothic, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
-.nav {
+.header {
   max-width: 1200px;
   height: 120px;
   margin: 10px auto;
   padding: 0;
 }
 
-.nav img {
+.header img {
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
 
-.nav img:hover {
+.header img:hover {
   opacity: .5;
 }
 
-.nav ul {
+.header ul {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
 
-.nav ul li a {
+.header ul li a {
   padding: 0;
   color: #000;
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
 
-.nav ul li a:hover {
+.header ul li a:hover {
   opacity: .5;
 }
 
-.nav ul li a i {
+.header ul li a i {
   margin-right: 5px;
 }
 
@@ -91,4 +91,39 @@ body {
   height: 500px;
   background-size: cover;
   background-image: url("/static/img/main-image5.png");
+}
+
+.nav {
+  padding: 20px 0;
+}
+
+.nav__wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.nav__wrap ul {
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav__wrap ul li a {
+  text-align: center;
+  letter-spacing: 3px;
+  color: #000;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.nav__wrap ul li a:hover {
+  opacity: .5;
+}
+
+.nav__wrap ul li a span {
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }

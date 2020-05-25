@@ -13,8 +13,8 @@
   </head>
 
   <body>
-    <!-- Navigation -->
-    <nav class="nav navbar">
+    <!-- header -->
+    <header class="header navbar">
       <div class="container">
         <a href="/">
           <img src="{% static 'img/logo.svg' %}">
@@ -57,7 +57,7 @@
           {% endif %}
         </ul>
       </div>
-    </nav>
+    </header>
 
     <!-- Image Slider -->
     <div id= "slides" class="top carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
@@ -76,6 +76,30 @@
       <div class="top__item--image5 carousel-item"></div>
     </div>
     </div>
+
+    <!-- Navigation-->
+    <nav class="nav navbar navbar-expand">
+      <div class="nav__wrap container">
+        <ul class="navbar-nav">
+          <li>
+            <a class="nav-link" href="/">PRODUCTS<br><span>-商品のご案内-</span></a>
+          </li>
+          <li>
+            <a class="nav-link" href="/">ABOUT<br><span>-当店について-</span></a>
+          </li>
+          <li>
+            <a class="nav-link" href="/">GUIDE<br><span>-ご利用方法-</span></a>
+          </li>
+          <li>
+            <a class="nav-link" href="/">ACCESS<br><span>-店舗のご案内-</span></a>
+          </li>
+          <li>
+            <a class="nav-link" href="/">CONTACT<br><span>-お問い合わせ-</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
 
     <main>
       <div class="container">
