@@ -1,0 +1,44 @@
+.top {
+  &__item {
+    &--image1 {
+      left: 50%;
+      transform: translateX(-50%) !important;
+      max-width: 1200px;
+      height: 500px;
+      background-size: cover;
+      background-image: url("/static/img/main-image1.png");
+    }
+    &--image2 {
+      left: 50%;
+      transform: translateX(-50%) !important;
+      max-width: 1200px;
+      height: 500px;
+      background-size: cover;
+      background-image: url("/static/img/main-image2.png");
+    }
+    &--image3 {
+      left: 50%;
+      transform: translateX(-50%) !important;
+      max-width: 1200px;
+      height: 500px;
+      background-size: cover;
+      background-image: url("/static/img/main-image3.png");
+    }
+    &--image4 {
+      left: 50%;
+      transform: translateX(-50%) !important;
+      max-width: 1200px;
+      height: 500px;
+      background-size: cover;
+      background-image: url("/static/img/main-image4.png");
+    }
+    &--image5 {
+      left: 50%;
+      transform: translateX(-50%) !important;
+      max-width: 1200px;
+      height: 500px;
+      background-size: cover;
+      background-image: url("/static/img/main-image5.png");
+    }
+  }
+}
