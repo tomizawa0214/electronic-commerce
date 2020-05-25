@@ -136,7 +136,7 @@ def removeSingleItem(request, slug):
 
 class ItemDetailView(DetailView):
   model = Item
-  template_name = 'app/product.html'
+  template_name = 'app/product_detail.html'
 
 class IndexView(ListView):
   model = Item
