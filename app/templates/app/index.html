@@ -44,23 +44,24 @@
 {% endblock %}
 
 {% block content %}
-<div class="text-center my-5">
-  <div class="row">
-    {% for item in object_list %}
-    <div class="col-lg-3 col-md-6">
-      <div class="card img-thumbnail itemlist mb-3">
-        <img class="card-img-top card-thum" src="{{ item.image.url }}" alt="">
-        <div class="card-body text-center px-2 py-3">
-          <p class="mb-0 text-secondary">{{ item.category }}</p>
-          <h5 class="font-weight-bold">{{ item.title }}</h5>
-          <h4 class="font-weight-bold">
-            {{ item.price }}円
-          </h4>
-        </div>
-        <a class="stretched-link" href="{% url 'product_detail' item.slug %}"></a>
-      </div>
+<div class="title">
+  <span>ALL CATEGORY</span>
+</div>
+<p class="title-text">素材の持つ香りや味わいを大切にし、それぞれの合うこだわりの素材を使用しています。ムダな乾燥を防いで中は水分をしっかりと抱き込みふっくらもちもちに、外皮はパリッとした食感に仕上がるよう、溶岩で作った石窯で焼き上げています。</p>
+<div class="product">
+  {% for item in object_list %}
+  <div class="product__item">
+    <div class="product__item--image">
+      <a href="{% url 'product_detail' item.slug %}">
+        <img src="{{ item.image.url }}" alt="">
+        <p class="product__item--image--mask"></p>
+        <p class="product__item--image--caption">READ MORE</p>
+      </a>
     </div>
-    {% endfor %}
+    <!-- <p>{{ item.category }}</p> -->
+    <h4>{{ item.title }}</h4>
+    <h3>{{ item.price }}<span>円(税込)</span></h3>
   </div>
+  {% endfor %}
 </div>
 {% endblock %}

@@ -5,7 +5,7 @@
   margin: 10px auto;
   padding: 0;
   img {
-    transition: .3s ease;
+    transition: .3s;
     &:hover {
       opacity: .5;
     }
@@ -16,7 +16,7 @@
       a {
         padding: 0;
         color: #000;
-        transition: .3s ease;
+        transition: .3s;
         &:hover {
           opacity: .5;
         }
