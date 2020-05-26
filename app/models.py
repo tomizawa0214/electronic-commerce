@@ -33,10 +33,18 @@ class Order(models.Model):
   ordered = models.BooleanField(default=False)
   payment = models.ForeignKey('Payment', on_delete=models.SET_NULL, blank=True, null=True)
 
-  def get_total(self):
-    total = 0
+  def get_subtotal(self):
+    subtotal = 0
     for order_item in self.items.all():
-      total += order_item.get_total_item_price()
+      subtotal += order_item.get_total_item_price()
+    return subtotal
+
+  def get_tax(self):
+    tax = 0.1 * self.get_subtotal()
+    return int(tax)
+    
+  def get_total(self):
+    total = self.get_tax() + self.get_subtotal()
     return total
 
   def __str__(self):

@@ -8,7 +8,7 @@ const style = {
   },
 };
 
-const card = elements.create('card', { style: style });
+const card = elements.create('card', { style: style, hidePostalCode: true });
 card.mount('#card-element');
 card.addEventListener('change', function (event) {
   const displayError = document.getElementById('card-errors');

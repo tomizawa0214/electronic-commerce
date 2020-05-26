@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="cart">
-  <span>Shopping Cart</span>
+  <span>SHOPPING CART</span>
 </div>
 
 <div class="order row">
@@ -30,7 +30,7 @@
               <h6 class="order__wrap--price">
                 小計：
                 <span class="order__wrap--price--num">{{ order_item.get_total_item_price }}</span>
-                <span>円(税込)</span>
+                <span>円(税別)</span>
               </h6>
             </div>
           </div>
@@ -48,17 +48,19 @@
   <div class="order__wrap col-md-3">
     <div class="card">
       <div class="card-body text-center">
-        {% if order.get_total %}
+        {% if order.get_subtotal %}
           <h6 class="order__wrap--total">
             合計：
-            <span class="order__wrap--total--num">{{ order.get_total }}</span>
-            <span>円(税込)</span>
+            <span class="order__wrap--total--num">{{ order.get_subtotal }}</span>
+            <span>円(税別)</span>
           </h6>
           <a class="order__wrap--register btn" href="{% url 'payment' %}">
-            <i class="fas fa-cash-register fa-fw" aria-hidden="true"></i>レジに進む</a>
+            <i class="fas fa-cash-register fa-fw" aria-hidden="true"></i>レジに進む
+          </a>
         {% endif %}
         <a class="order__wrap--shopping btn" href="/">
-          <i class="fas fa-cart-plus fa-fw" aria-hidden="true"></i>買い物を続ける</a>
+          <i class="fas fa-cart-plus fa-fw" aria-hidden="true"></i>買い物を続ける
+        </a>
       </div>
     </div>
   </div>
