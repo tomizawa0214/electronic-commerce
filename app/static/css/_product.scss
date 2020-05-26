@@ -1,6 +1,5 @@
 .title {
   position: relative;
-  margin: 50px 0 30px;
   text-align: center;
   letter-spacing: 3px;
   font-size: 20px;
@@ -30,7 +29,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 40px;
-  margin: 50px 0 80px;
+  margin: 50px 0 0;
   &__item {
     &--image {
       position: relative;

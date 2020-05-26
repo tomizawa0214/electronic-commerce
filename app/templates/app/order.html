@@ -1,38 +1,37 @@
 {% extends "app/base.html" %}
 
 {% block content %}
-<div class="my-5">
-  <h3>ショッピングカート</h3>
+<div class="cart">
+  <span>Shopping Cart</span>
 </div>
 
-<div class="row order">
-  <div class="col-md-9 mb-5">
+<div class="order row">
+  <div class="order__wrap col-md-9">
     <div class="card">
-      <div class="card-body px-4 py-3">
+      <div class="card-body">
         {% for order_item in order.items.all %}
           <div class="row">
-            <div class="col-md-3 text-center">
+            <div class="col-md-3">
               <img src="{{ order_item.item.image.url }}" class="img-fluid" alt="{{ order_item.item.title }}">
             </div>
-            <div class="col-md-6">
+            <div class="order__wrap--item col-md-6">
               <h5>{{ order_item.item.title }}</h5>
-              <p class="mb-1">
+              <p>
                 数量：
-                <a href="{% url 'removesingleitem' order_item.item.slug %}"><span class="badge badge-warning">-</span></a>
+                <a href="{% url 'removesingleitem' order_item.item.slug %}"><span class="badge badge-warning">－</span></a>
                 {{ order_item.quantity }}
-                <a href="{% url 'additem' order_item.item.slug %}"><span class="badge badge-warning">+</span></a>
+                <a href="{% url 'additem' order_item.item.slug %}"><span class="badge badge-warning">＋</span></a>
               </p>
               <a href="{% url 'removeitem' order_item.item.slug %}">
-                <span class="badge badge-danger">削除</span>
+                <span class="badge badge-danger">取消</span>
               </a>
             </div>
-            <div class="col-md-3 text-right">
-              <p>
-                価格：
-                <span class="text-danger font-weight-bold">
-                  {{ order_item.get_total_item_price }}円
-                </span>
-              </p>
+            <div class="col-md-3">
+              <h6 class="order__wrap--price">
+                小計：
+                <span class="order__wrap--price--num">{{ order_item.get_total_item_price }}</span>
+                <span>円(税込)</span>
+              </h6>
             </div>
           </div>
           {% if not forloop.last %}
@@ -40,22 +39,26 @@
           {% endif %}
 
           {% empty %}
-          <p class="mb-3">カートは空です</p>
+          <p class="order__wrap--empty">※カートは空です</p>
         {% endfor %}
       </div>
     </div>
   </div>
 
-  <div class="col-md-3">
+  <div class="order__wrap col-md-3">
     <div class="card">
-      <div class="card-body text-center px-2 py-3">
+      <div class="card-body text-center">
         {% if order.get_total %}
-          <p>小計：<span class="font-weight-bold">{{ order.get_total }}</span>円</p>
-          <div class="mb-3">
-            <a class="btn btn-warning" href="{% url 'payment' %}">レジに進む</a>
-          </div>
+          <h6 class="order__wrap--total">
+            合計：
+            <span class="order__wrap--total--num">{{ order.get_total }}</span>
+            <span>円(税込)</span>
+          </h6>
+          <a class="order__wrap--register btn" href="{% url 'payment' %}">
+            <i class="fas fa-cash-register fa-fw" aria-hidden="true"></i>レジに進む</a>
         {% endif %}
-        <a class="btn btn-primary" href="/">買い物を続ける</a>
+        <a class="order__wrap--shopping btn" href="/">
+          <i class="fas fa-cart-plus fa-fw" aria-hidden="true"></i>買い物を続ける</a>
       </div>
     </div>
   </div>

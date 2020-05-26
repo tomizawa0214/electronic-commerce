@@ -14,6 +14,10 @@ body {
   font-family: "Montserrat", "Roboto", "游ゴシック体", "Yu Gothic", YuGothic, "游ゴシック", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", MeiryoKe_PGothic, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
+main {
+  margin: 50px 0 80px;
+}
+
 .header {
   width: 100%;
   max-width: 1200px;
@@ -139,7 +143,6 @@ body {
 
 .title {
   position: relative;
-  margin: 50px 0 30px;
   text-align: center;
   letter-spacing: 3px;
   font-size: 20px;
@@ -173,7 +176,7 @@ body {
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 40px;
-  margin: 50px 0 80px;
+  margin: 50px 0 0;
 }
 
 .product__item--image {
@@ -260,7 +263,6 @@ body {
 }
 
 .product-detail__wrap--price--num {
-  margin-left: 1px;
   font-size: 40px;
   font-weight: bold;
   color: #e8435f;
@@ -301,6 +303,164 @@ body {
   top: 3px;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.cart {
+  position: relative;
+  margin: 50px 0 30px;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 20px;
+}
+
+.cart span {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  padding: 0 15px;
+  background: #fff;
+}
+
+.cart:after {
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 100%;
+  height: 1px;
+  content: '';
+  background: #333;
+}
+
+.order {
+  margin: 50px 0 0;
+}
+
+.order__wrap:first-child {
+  padding-left: 0;
+}
+
+.order__wrap:last-child {
+  padding-right: 0;
+}
+
+.order__wrap--item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 22% 22% 56%;
+      grid-template-rows: 22% 22% 56%;
+}
+
+.order__wrap--item h5 {
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.order__wrap--item p {
+  margin: 0;
+}
+
+.order__wrap--item p a:first-child {
+  margin-right: 3px;
+}
+
+.order__wrap--item p a:last-child {
+  margin-left: 3px;
+}
+
+.order__wrap--item p a span {
+  line-height: 1.3;
+}
+
+.order__wrap--item a {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.order__wrap--item a span {
+  line-height: 1.3;
+}
+
+.order__wrap--price, .order__wrap--total {
+  font-family: 'Roboto', 'Montserrat', sans-serif;
+}
+
+.order__wrap--price--num, .order__wrap--total--num {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e8435f;
+}
+
+.order__wrap--empty {
+  margin: 6px 0;
+}
+
+.order__wrap--total {
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.order__wrap--register {
+  position: relative;
+  width: 200px;
+  margin-top: 30px;
+  color: #fff;
+  background: #e8435f;
+  -webkit-box-shadow: 0 3px 0 #AC1531;
+          box-shadow: 0 3px 0 #AC1531;
+  border: 0;
+  font-weight: bold;
+  -webkit-transition: .3s;
+  transition: .3s;
+  margin: 0 0 20px;
+}
+
+.order__wrap--register:hover {
+  color: #fff;
+  opacity: .7;
+}
+
+.order__wrap--register:active {
+  top: 3px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.order__wrap--register i {
+  margin: 0 8px 0 0;
+}
+
+.order__wrap--shopping {
+  position: relative;
+  width: 200px;
+  margin-top: 30px;
+  color: #fff;
+  background: #e8435f;
+  -webkit-box-shadow: 0 3px 0 #AC1531;
+          box-shadow: 0 3px 0 #AC1531;
+  border: 0;
+  font-weight: bold;
+  -webkit-transition: .3s;
+  transition: .3s;
+  margin: 0 0 30px;
+  background: #a85413;
+  -webkit-box-shadow: 0 3px 0 #492408;
+          box-shadow: 0 3px 0 #492408;
+}
+
+.order__wrap--shopping:hover {
+  color: #fff;
+  opacity: .7;
+}
+
+.order__wrap--shopping:active {
+  top: 3px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.order__wrap--shopping i {
+  margin: 0 8px 0 0;
 }
 
 .footer {
@@ -379,13 +539,14 @@ body {
 
 .login__form button {
   position: relative;
-  width: 50%;
+  width: 200px;
   margin-top: 30px;
   color: #fff;
   background: #e8435f;
   -webkit-box-shadow: 0 3px 0 #AC1531;
           box-shadow: 0 3px 0 #AC1531;
   border: 0;
+  font-weight: bold;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -418,13 +579,14 @@ body {
 
 .logout form button {
   position: relative;
-  width: 50%;
+  width: 200px;
   margin-top: 30px;
   color: #fff;
   background: #e8435f;
   -webkit-box-shadow: 0 3px 0 #AC1531;
           box-shadow: 0 3px 0 #AC1531;
   border: 0;
+  font-weight: bold;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -469,13 +631,14 @@ body {
 
 .signup__form button {
   position: relative;
-  width: 50%;
+  width: 200px;
   margin-top: 30px;
   color: #fff;
   background: #e8435f;
   -webkit-box-shadow: 0 3px 0 #AC1531;
           box-shadow: 0 3px 0 #AC1531;
   border: 0;
+  font-weight: bold;
   -webkit-transition: .3s;
   transition: .3s;
 }
