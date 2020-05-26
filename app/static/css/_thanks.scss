@@ -1,0 +1,18 @@
+.thanks {
+  text-align: center;
+  margin: 0 0 80px;
+  h1 {
+    margin: 0 0 10px;
+  }
+  p {
+    margin: 0 0 30px;
+  }
+  a {
+    @include button;
+    background: #a85413;
+    box-shadow: 0 3px 0 #492408;
+    i {
+      margin: 0 8px 0 0;
+    }
+  }
+}

@@ -1,9 +1,11 @@
 {% extends "app/base.html" %}
 
 {% block content %}
-<div class="text-center my-5">
-  <h1 class="mb-5">ご注文ありがとうございました。</h1>
-  <p class="mb-4">今後ともご愛顧賜りますよう、お願い申し上げます。</p>
-  <a class="btn btn-primary" href="/">買い物を続ける</a>
+<div class="thanks">
+  <h1>ご注文ありがとうございました。</h1>
+  <p>今後ともご愛顧賜りますよう、お願い申し上げます。</p>
+  <a class="btn" href="/">
+    <i class="fas fa-cart-plus fa-fw" aria-hidden="true"></i>買い物を続ける
+  </a>
 </div>
 {% endblock %}
