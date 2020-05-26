@@ -1,0 +1,51 @@
+.product-detail {
+  &__wrap {
+    h3 {
+      margin: 0;
+      font-size: 30px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      line-height: 1.2;
+    }
+    &--price {
+      margin: 0;
+      font-family: 'Roboto', 'Montserrat', sans-serif;
+      line-height: 1.2;
+      font-size: 20px;
+      &--num {
+        margin-left: 1px;
+        font-size: 40px;
+        font-weight: bold;
+        color: #e8435f;
+      }
+      &--chara {
+        margin-left: 1px;
+      }
+    }
+    hr {
+      border-top: 1px solid rgba(0, 0, 0, .7);
+    }
+    &--explanation {
+      line-height: 1.6;
+    }
+    &--button {
+      position: relative;
+      width: 200px;
+      margin-top: 30px;
+      color: #fff;
+      background: #e8435f;
+      box-shadow: 0 3px 0 #AC1531;
+      border: 0;
+      font-weight: bold;
+      transition: .3s;
+      &:hover {
+        color: #fff;
+        opacity: .7;
+      }
+      &:active {
+        top: 3px;
+        box-shadow: none;
+      }
+    }
+  }
+}
