@@ -228,6 +228,9 @@ main {
 .title:after {
   position: absolute;
   top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   display: block;
   width: 100%;
   height: 1px;
@@ -414,7 +417,7 @@ main {
   }
 }
 
-.cart {
+.order-title {
   position: relative;
   margin: 0 0 30px;
   text-align: center;
@@ -422,7 +425,7 @@ main {
   font-size: 20px;
 }
 
-.cart span {
+.order-title span {
   position: relative;
   display: inline-block;
   z-index: 1;
@@ -430,9 +433,12 @@ main {
   background: #fff;
 }
 
-.cart:after {
+.order-title:after {
   position: absolute;
   top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   display: block;
   width: 100%;
   height: 1px;
@@ -615,7 +621,7 @@ main {
   }
 }
 
-.order-check {
+.payment-title {
   position: relative;
   margin: 0 0 30px;
   text-align: center;
@@ -623,7 +629,7 @@ main {
   font-size: 20px;
 }
 
-.order-check span {
+.payment-title span {
   position: relative;
   display: inline-block;
   z-index: 1;
@@ -631,9 +637,12 @@ main {
   background: #fff;
 }
 
-.order-check:after {
+.payment-title:after {
   position: absolute;
   top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   display: block;
   width: 100%;
   height: 1px;
@@ -923,6 +932,40 @@ main {
   }
 }
 
+.login-title {
+  position: relative;
+  margin: 0 0 30px;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 20px;
+  margin: 0 15px 30px;
+}
+
+.login-title span {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  padding: 0 15px;
+  background: #fff;
+}
+
+.login-title:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
+  width: 100%;
+  height: 1px;
+  content: '';
+  background: #333;
+}
+
+.login-title:after {
+  max-width: 500px;
+}
+
 .login {
   max-width: 500px;
   margin: 0 auto;
@@ -1015,6 +1058,40 @@ main {
   margin: 0 8px 0 0;
 }
 
+.signup-title {
+  position: relative;
+  margin: 0 0 30px;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 20px;
+  margin: 0 15px 30px;
+}
+
+.signup-title span {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  padding: 0 15px;
+  background: #fff;
+}
+
+.signup-title:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
+  width: 100%;
+  height: 1px;
+  content: '';
+  background: #333;
+}
+
+.signup-title:after {
+  max-width: 500px;
+}
+
 .signup {
   max-width: 500px;
   margin: 0 auto;
@@ -1077,6 +1154,7 @@ main {
   text-align: center;
   letter-spacing: 3px;
   font-size: 20px;
+  margin: 0 0 30px;
 }
 
 .profile-title span {
@@ -1090,11 +1168,18 @@ main {
 .profile-title:after {
   position: absolute;
   top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   display: block;
   width: 100%;
   height: 1px;
   content: '';
   background: #333;
+}
+
+.profile-title:after {
+  max-width: 500px;
 }
 
 .profile {
@@ -1161,6 +1246,9 @@ main {
 }
 
 @media screen and (max-width: 576px) {
+  .profile-title:after {
+    max-width: 300px;
+  }
   .profile {
     max-width: 300px;
   }

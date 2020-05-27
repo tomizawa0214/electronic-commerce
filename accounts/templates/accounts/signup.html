@@ -2,8 +2,11 @@
 {% load widget_tweaks %}
 
 {% block content %}
+<div class="signup-title">
+  <span>SIGN UP</span>
+</div>
+
 <div class="signup col-12">
-  <h5>会員登録</h5>
   <form method="post" class="login__form">
     {% csrf_token %}
     <div class="signup__form--item form-label-group">

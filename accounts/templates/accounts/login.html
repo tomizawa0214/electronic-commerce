@@ -2,8 +2,11 @@
 {% load widget_tweaks %}
 
 {% block content %}
+<div class="login-title">
+  <span>LOGIN</span>
+</div>
+
 <div class="login col-12">
-  <h5>ログイン</h5>
   <form method="post" class="login__form">
     {% csrf_token %}
     <div class="login__form--item form-label-group">

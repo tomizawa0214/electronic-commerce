@@ -1,24 +1,8 @@
 .profile-title {
-  position: relative;
+  @include sectionTitle;
   margin: 0 0 30px;
-  text-align: center;
-  letter-spacing: 3px;
-  font-size: 20px;
-  span {
-    position: relative;
-    display: inline-block;
-    z-index: 1;
-    padding: 0 15px;
-    background: #fff;
-  }
   &:after {
-    position: absolute;
-    top: 50%;
-    display: block;
-    width: 100%;
-    height: 1px;
-    content: '';
-    background: #333;
+    max-width: 500px;
   }
 }
 
@@ -58,6 +42,12 @@
 
 // -----sm(Small)-----
 @media screen and (max-width: 576px) {
+  .profile-title {
+    &:after {
+      max-width: 300px;
+    }
+  }
+
   .profile {
     max-width: 300px;
     &__table {
