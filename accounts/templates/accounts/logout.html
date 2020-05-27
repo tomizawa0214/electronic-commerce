@@ -5,7 +5,7 @@
   <p>ログアウトしますか？</p>
   <form method="post">
     {% csrf_token %}
-    <button type="submit" class="btn rounded-pill">
+    <button type="submit" class="btn rounded-pill" ontouchstart="">
       <i class="fas fa-sign-out-alt fa-fw" aria-hidden="true"></i>ログアウト
     </button>
   </form>

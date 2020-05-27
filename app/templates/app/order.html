@@ -54,11 +54,11 @@
             <span class="order__wrap--total--num">{{ order.get_subtotal }}</span>
             <span>円(税別)</span>
           </h6>
-          <a class="order__wrap--register btn" href="{% url 'payment' %}">
+          <a class="order__wrap--register btn rounded-pill" href="{% url 'payment' %}" ontouchstart="">
             <i class="fas fa-cash-register fa-fw" aria-hidden="true"></i>レジに進む
           </a>
         {% endif %}
-        <a class="order__wrap--shopping btn" href="/">
+        <a class="order__wrap--shopping btn rounded-pill" href="/" ontouchstart="">
           <i class="fas fa-cart-plus fa-fw" aria-hidden="true"></i>買い物を続ける
         </a>
       </div>
