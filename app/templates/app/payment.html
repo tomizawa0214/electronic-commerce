@@ -9,7 +9,7 @@
 <form action="." method="POST" id="payment-form">
   <div class="payment row">
     <div class="payment__wrap col-md-9">
-      <div class="card">
+      <div class="card rounded-0">
         <div class="card-body">
           <div class="row">
             <div class="payment__wrap--item col-md-5">
@@ -23,6 +23,9 @@
               <p><i class="fas fa-check-circle fa-fw" aria-hidden="true"></i>お支払い方法</p>
               {% csrf_token %}
               <div id="card-element"></div>
+              <!-- <div id="card-number"></div>
+              <div id="card-expiry"></div>
+              <div id="card-cvc"></div> -->
               <div id="card-errors" role="alert"></div>
             </div>
           </div>
@@ -31,11 +34,9 @@
     </div>
 
     <div class="payment__wrap col-md-3">
-      <div class="card">
-        <div class="card-body text-center">
-          <p class="payment__wrap--order">
-            <i class="fas fa-check-circle fa-fw" aria-hidden="true"></i>ご注文内容
-          </p>
+      <div class="card rounded-0">
+        <div class="card-body text-center pt-0">
+          <p class="payment__wrap--order">ご注文内容</p>
           <p class="payment__wrap--price">
             商品の小計：
             <span>{{ order.get_subtotal }}</span>

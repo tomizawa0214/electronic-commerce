@@ -8,8 +8,17 @@ const style = {
   },
 };
 
+// フォームのidを指定してElementsをマウント
 const card = elements.create('card', { style: style, hidePostalCode: true });
 card.mount('#card-element');
+// const cardNumber = elements.create('cardNumber', {style: style,placeholder: 'カード番号 0000 0000 0000 0000'});
+// cardNumber.mount('#card-number');
+// const cardExpiry = elements.create('cardExpiry',{style: style,placeholder: '有効期限　月/年'});
+// cardExpiry.mount('#card-expiry');
+// const cardCvc = elements.create('cardCvc', {style: style,placeholder: 'セキュリティ番号'});
+// cardCvc.mount('#card-cvc');
+
+// カード番号のリアルタイムバリデーション
 card.addEventListener('change', function (event) {
   const displayError = document.getElementById('card-errors');
   if (event.error) {
@@ -19,6 +28,7 @@ card.addEventListener('change', function (event) {
   }
 });
 
+// 確定ボタンでエラーをチェック
 const form = document.getElementById('payment-form');
 form.addEventListener('submit', function (event) {
   event.preventDefault();
@@ -33,6 +43,7 @@ form.addEventListener('submit', function (event) {
   });
 });
 
+// フォーム送信処理 (stripeTokenをhiddenで送信)
 function stripeTokenHandler(token) {
   const form = document.getElementById('payment-form');
   const hiddenInput = document.createElement('input');

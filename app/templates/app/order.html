@@ -7,7 +7,7 @@
 
 <div class="order row">
   <div class="order__wrap col-md-9">
-    <div class="card">
+    <div class="card rounded-0">
       <div class="card-body">
         {% for order_item in order.items.all %}
           <div class="row">
@@ -46,7 +46,7 @@
   </div>
 
   <div class="order__wrap col-md-3">
-    <div class="card">
+    <div class="card rounded-0">
       <div class="card-body text-center">
         {% if order.get_subtotal %}
           <h6 class="order__wrap--total">

@@ -16,3 +16,24 @@
     }
   }
 }
+
+// -----sm(Small)-----
+@media screen and (max-width: 576px) {
+  .thanks {
+    h1 {
+      font-size: 30px;
+    }
+  }
+}
+
+// -----md(Medium)-----
+// @media screen and (min-width: 768px) {
+// }
+
+// -----lg(Large)-----
+// @media screen and (min-width: 992px) {
+// }
+
+// -----xl(Extra Large)-----
+// @media screen and (min-width: 1200px) {
+// }

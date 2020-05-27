@@ -408,28 +408,6 @@ main {
   .product-detail__wrap--explanation {
     text-align: left;
   }
-  .product-detail__wrap--button {
-    position: relative;
-    width: 200px;
-    margin-top: 30px;
-    color: #fff;
-    background: #e8435f;
-    -webkit-box-shadow: 0 3px 0 #AC1531;
-            box-shadow: 0 3px 0 #AC1531;
-    border: 0;
-    font-weight: bold;
-    -webkit-transition: .3s;
-    transition: .3s;
-  }
-  .product-detail__wrap--button:hover {
-    color: #fff;
-    opacity: .7;
-  }
-  .product-detail__wrap--button:active {
-    top: 3px;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
 }
 
 .cart {
@@ -590,6 +568,49 @@ main {
   margin: 0 8px 0 0;
 }
 
+@media screen and (max-width: 576px) {
+  .order__wrap:first-child {
+    padding: 0 0 30px;
+  }
+  .order__wrap:last-child {
+    padding: 0;
+  }
+  .order__wrap--item {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: none;
+        grid-template-rows: none;
+        grid-template-areas: "areaA areaB" "areaC areaC";
+    margin: 5px 0 0;
+  }
+  .order__wrap--item h5 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: areaA;
+  }
+  .order__wrap--item p {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: areaC;
+  }
+  .order__wrap--item a {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: areaB;
+    justify-self: flex-end;
+  }
+  .order__wrap--price {
+    margin: 20px 0 0;
+  }
+  .order__wrap--empty {
+    text-align: center;
+  }
+  .order__wrap--shopping {
+    margin: 0;
+  }
+}
+
 .order-check {
   position: relative;
   margin: 0 0 30px;
@@ -631,8 +652,6 @@ main {
 .payment__wrap--item {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 50px 30px 30px;
-      grid-template-rows: 50px 30px 30px;
   -ms-grid-columns: 30% 70%;
       grid-template-columns: 30% 70%;
 }
@@ -659,8 +678,6 @@ main {
 .payment__wrap--pay {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 50px 45px 30px;
-      grid-template-rows: 50px 45px 30px;
 }
 
 .payment__wrap--pay p:first-child {
@@ -668,8 +685,9 @@ main {
 }
 
 .payment__wrap--order {
-  line-height: 1.2;
-  font-weight: bold;
+  background: #FCE8EB;
+  margin: 0 -20px 16px;
+  line-height: 1.6;
 }
 
 .payment__wrap--price, .payment__wrap--tax {
@@ -689,6 +707,10 @@ main {
   font-size: 20px;
   font-weight: bold;
   color: #e8435f;
+}
+
+.payment__wrap--total span:last-child {
+  font-size: 12px;
 }
 
 .payment__wrap button {
@@ -730,10 +752,10 @@ main {
   border: 1px solid transparent;
   -webkit-box-shadow: 0 1px 3px 0 #e6ebf1;
           box-shadow: 0 1px 3px 0 #e6ebf1;
-  -webkit-transition: -webkit-box-shadow 150ms ease;
-  transition: -webkit-box-shadow 150ms ease;
-  transition: box-shadow 150ms ease;
-  transition: box-shadow 150ms ease, -webkit-box-shadow 150ms ease;
+  -webkit-transition: -webkit-box-shadow 150ms;
+  transition: -webkit-box-shadow 150ms;
+  transition: box-shadow 150ms;
+  transition: box-shadow 150ms, -webkit-box-shadow 150ms;
 }
 
 .StripeElement--focus {
@@ -751,6 +773,23 @@ main {
 
 #card-errors {
   color: red;
+}
+
+@media screen and (max-width: 576px) {
+  .order-check span {
+    width: 85%;
+  }
+  .payment__wrap:first-child {
+    padding: 0 0 30px;
+  }
+  .payment__wrap:last-child {
+    padding: 0;
+  }
+  .payment__wrap--item {
+    margin: 0 0 30px;
+    -ms-grid-columns: 40% 60%;
+        grid-template-columns: 40% 60%;
+  }
 }
 
 .thanks {
@@ -796,6 +835,12 @@ main {
 
 .thanks a i {
   margin: 0 8px 0 0;
+}
+
+@media screen and (max-width: 576px) {
+  .thanks h1 {
+    font-size: 30px;
+  }
 }
 
 .footer {

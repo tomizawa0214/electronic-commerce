@@ -33,7 +33,6 @@
     }
     &--item {
       display: grid;
-      grid-template-rows: 50px 30px 30px;
       grid-template-columns: 30% 70%;
       p:first-child {
         font-weight: bold;
@@ -50,14 +49,14 @@
     }
     &--pay {
       display: grid;
-      grid-template-rows: 50px 45px 30px;
       p:first-child {
         font-weight: bold;
       }
     }
     &--order {
-      line-height: 1.2;
-      font-weight: bold;
+      background: #FCE8EB;
+      margin: 0 -20px 16px;
+      line-height: 1.6;
     }
     &--price,
     &--tax {
@@ -75,6 +74,9 @@
         font-size: 20px;
         font-weight: bold;
         color: #e8435f;
+      }
+      span:last-child {
+        font-size: 12px;
       }
     }
     button {
@@ -95,7 +97,7 @@
   border-radius: 4px;
   border: 1px solid transparent;
   box-shadow: 0 1px 3px 0 #e6ebf1;
-  transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms;
   &--focus {
     box-shadow: 0 1px 3px 0 #cfd7df;
   }
@@ -110,3 +112,39 @@
 #card-errors {
   color: red;
 }
+
+// -----sm(Small)-----
+@media screen and (max-width: 576px) {
+  .order-check {
+    span {
+      width: 85%;
+    }
+  }
+  
+  .payment {
+    &__wrap {
+      &:first-child {
+        padding: 0 0 30px;
+      }
+      &:last-child {
+        padding: 0;
+      }
+      &--item {
+        margin: 0 0 30px;
+        grid-template-columns: 40% 60%;
+      }
+    }
+  }
+}
+
+// -----md(Medium)-----
+// @media screen and (min-width: 768px) {
+// }
+
+// -----lg(Large)-----
+// @media screen and (min-width: 992px) {
+// }
+
+// -----xl(Extra Large)-----
+// @media screen and (min-width: 1200px) {
+// }
