@@ -1,7 +1,7 @@
 .header {
   width: 100%;
   max-width: 1200px;
-  height: 120px;
+  // height: 120px;
   margin: 10px auto;
   padding: 0;
   img {
@@ -14,7 +14,7 @@
     justify-content: space-evenly;
     li {
       a {
-        padding: 0;
+        padding: 4px;
         color: #000;
         transition: .3s;
         &:hover {
@@ -22,6 +22,17 @@
         }
         i {
           margin-right: 8px;
+        }
+        span {
+          vertical-align: 2px;
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 1px;
+        }
+      }
+      &:not(:nth-child(3)) {
+        span {
+          margin-left: 8px;
         }
       }
     }
@@ -31,7 +42,7 @@
 // -----sm(Small)-----
 @media screen and (max-width: 576px) {
   .header {
-    height: 200px;
+    // height: 200px;
     &__wrap {
       display: flex;
       flex-direction: column;

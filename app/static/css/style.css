@@ -21,7 +21,6 @@ main {
 .header {
   width: 100%;
   max-width: 1200px;
-  height: 120px;
   margin: 10px auto;
   padding: 0;
 }
@@ -42,7 +41,7 @@ main {
 }
 
 .header ul li a {
-  padding: 0;
+  padding: 4px;
   color: #000;
   -webkit-transition: .3s;
   transition: .3s;
@@ -56,10 +55,18 @@ main {
   margin-right: 8px;
 }
 
+.header ul li a span {
+  vertical-align: 2px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.header ul li:not(:nth-child(3)) span {
+  margin-left: 8px;
+}
+
 @media screen and (max-width: 576px) {
-  .header {
-    height: 200px;
-  }
   .header__wrap {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -184,6 +191,7 @@ main {
 }
 
 .nav__wrap ul li a span {
+  vertical-align: 2px;
   margin-top: 5px;
   font-size: 12px;
   font-weight: 600;
@@ -1201,6 +1209,14 @@ main {
   overflow: hidden;
 }
 
+.profile__table--name {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
 .profile__table tr:not(:last-of-type) td {
   border-bottom: 1px solid #d1dbeb;
 }
@@ -1216,7 +1232,7 @@ main {
   padding: 16px 24px;
 }
 
-.profile a {
+.profile a, .profile button {
   position: relative;
   width: 200px;
   margin-top: 30px;
@@ -1230,18 +1246,18 @@ main {
   transition: .3s;
 }
 
-.profile a:hover {
+.profile a:hover, .profile button:hover {
   color: #fff;
   opacity: .7;
 }
 
-.profile a:active {
+.profile a:active, .profile button:active {
   top: 3px;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.profile a i {
+.profile a i, .profile button i {
   margin: 0 8px 0 0;
 }
 
@@ -1260,7 +1276,7 @@ main {
   .profile__table th {
     display: block;
     width: 100%;
-    padding: 8px 14px;
+    padding: 4px 14px;
   }
   .profile__table td {
     display: block;

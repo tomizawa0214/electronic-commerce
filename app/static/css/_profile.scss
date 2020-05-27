@@ -20,6 +20,11 @@
     border-radius: 8px;
     border-collapse: separate;
     overflow: hidden;
+    &--name {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
     tr:not(:last-of-type) {
       td {
         border-bottom: 1px solid #d1dbeb;
@@ -35,7 +40,7 @@
       padding: 16px 24px;
     }
   }
-  a {
+  a, button {
     @include button;
   }
 }
@@ -57,7 +62,7 @@
       th {
         display: block;
         width: 100%;
-        padding: 8px 14px;
+        padding: 4px 14px;
       }
       td {
         display: block;

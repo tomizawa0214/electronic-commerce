@@ -22,36 +22,42 @@
         <ul class="navbar-nav">
           <li>
             <a class="nav-link" href="/">
-              <i class="fas fa-home fa-fw" aria-hidden="true"></i>トップページ
+              <i class="fas fa-home fa-fw" aria-hidden="true"></i>HOME
+              <span>-トップページ-</span>
             </a>
           </li>
           {% if user.is_authenticated %}
           <li>
             <a class="nav-link" href="{% url 'profile' %}">
-              <i class="fas fa-user fa-fw" aria-hidden="true"></i>マイページ</a>
+              <i class="fas fa-user fa-fw" aria-hidden="true"></i>MY PAGE
+              <span>-マイページ-</span>
+            </a>
           </li>
           <li>
             <a class="nav-link" href="{% url 'order' %}">
-              <i class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i>カート
+              <i class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i>SHOPPING CART
               <span class="badge badge-pill badge-warning">
-                {{ request.user|itemCount }}
+                商品{{ request.user|itemCount }}
               </span>
             </a>
           </li>
           <li>
             <a class="nav-link" href="{% url 'account_logout' %}">
-              <i class="fas fa-sign-out-alt fa-fw" aria-hidden="true"></i>ログアウト
+              <i class="fas fa-sign-out-alt fa-fw" aria-hidden="true"></i>LOGOUT
+              <span>-ログアウト-</span>
             </a>
           </li>
           {% else %}
           <li>
             <a class="nav-link" href="{% url 'account_signup' %}">
-              <i class="fas fa-user-plus fa-fw" aria-hidden="true"></i>会員登録
+              <i class="fas fa-user-plus fa-fw" aria-hidden="true"></i>SIGN UP
+              <span>-会員登録-</span>
             </a>
           </li>
           <li>
             <a class="nav-link" href="{% url 'account_login' %}">
-              <i class="fas fa-sign-in-alt fa-fw" aria-hidden="true"></i>ログイン
+              <i class="fas fa-sign-in-alt fa-fw" aria-hidden="true"></i>LOGIN
+              <span>-ログイン-</span>
             </a>
           </li>
           {% endif %}
