@@ -388,6 +388,10 @@ main {
           box-shadow: none;
 }
 
+.product-detail__wrap--button i {
+  margin: 0 8px 0 0;
+}
+
 @media screen and (max-width: 576px) {
   .product-detail__wrap {
     text-align: center;
@@ -963,6 +967,10 @@ main {
           box-shadow: none;
 }
 
+.login__form button i {
+  margin: 0 8px 0 0;
+}
+
 .logout {
   max-width: 500px;
   margin: 0 auto;
@@ -1001,6 +1009,10 @@ main {
   top: 3px;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.logout form button i {
+  margin: 0 8px 0 0;
 }
 
 .signup {
@@ -1053,4 +1065,119 @@ main {
   top: 3px;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.signup__form button i {
+  margin: 0 8px 0 0;
+}
+
+.profile-title {
+  position: relative;
+  margin: 0 0 30px;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 20px;
+}
+
+.profile-title span {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  padding: 0 15px;
+  background: #fff;
+}
+
+.profile-title:after {
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 100%;
+  height: 1px;
+  content: '';
+  background: #333;
+}
+
+.profile {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile h5 {
+  margin: 10px auto 30px;
+}
+
+.profile__table {
+  margin: 0 auto;
+  width: 100%;
+  border: 1px solid #d1dbeb;
+  border-radius: 8px;
+  border-collapse: separate;
+  overflow: hidden;
+}
+
+.profile__table tr:not(:last-of-type) td {
+  border-bottom: 1px solid #d1dbeb;
+}
+
+.profile__table th {
+  text-align: left;
+  padding: 16px 24px;
+  background: #f1f5fa;
+}
+
+.profile__table td {
+  text-align: left;
+  padding: 16px 24px;
+}
+
+.profile a {
+  position: relative;
+  width: 200px;
+  margin-top: 30px;
+  color: #fff;
+  background: #e8435f;
+  -webkit-box-shadow: 0 3px 0 #AC1531;
+          box-shadow: 0 3px 0 #AC1531;
+  border: 0;
+  font-weight: bold;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.profile a:hover {
+  color: #fff;
+  opacity: .7;
+}
+
+.profile a:active {
+  top: 3px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.profile a i {
+  margin: 0 8px 0 0;
+}
+
+@media screen and (max-width: 576px) {
+  .profile {
+    max-width: 300px;
+  }
+  .profile__table {
+    table-layout: fixed;
+    word-break: break-all;
+    word-wrap: break-word;
+  }
+  .profile__table th {
+    display: block;
+    width: 100%;
+    padding: 8px 14px;
+  }
+  .profile__table td {
+    display: block;
+    width: 100%;
+    padding: 16px 14px;
+    border: 0;
+  }
 }
