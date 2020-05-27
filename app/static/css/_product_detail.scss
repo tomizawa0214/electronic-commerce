@@ -25,10 +25,50 @@
       border-top: 1px solid rgba(0, 0, 0, .7);
     }
     &--explanation {
-      line-height: 1.6;
+      line-height: 1.8;
     }
     &--button {
       @include button;
     }
   }
 }
+
+// -----sm(Small)-----
+@media screen and (max-width: 576px) {
+  .product-detail {
+    &__wrap {
+      text-align: center;
+      h3 {
+        margin: 5px 0 0;
+        font-size: 20px;
+      }
+      hr {
+        margin: 8px 0;
+      }
+      &--price {
+        font-size: 15px;
+        &--num {
+          font-size: 30px;
+        }
+      }
+      &--explanation {
+        text-align: left;
+      }
+      &--button {
+        @include button;
+      }
+    }
+  }
+}
+
+// -----md(Medium)-----
+// @media screen and (min-width: 768px) {
+// }
+
+// -----lg(Large)-----
+// @media screen and (min-width: 992px) {
+// }
+
+// -----xl(Extra Large)-----
+// @media screen and (min-width: 1200px) {
+// }

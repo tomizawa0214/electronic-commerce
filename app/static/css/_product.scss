@@ -24,6 +24,7 @@
 
 .title-text {
   margin: 0 0 30px;
+  line-height: 1.8;
 }
 
 .product {
@@ -91,3 +92,31 @@
     }
   }
 }
+
+// -----sm(Small)-----
+@media screen and (max-width: 576px) {
+  .title-text {
+    margin: 0;
+  }
+
+  .product {
+    grid-template-columns: 1fr;
+    &__item {
+      h4 {
+        margin: 5px 0 0;
+      }
+    }
+  }
+}
+
+// -----md(Medium)-----
+// @media screen and (min-width: 768px) {
+// }
+
+// -----lg(Large)-----
+// @media screen and (min-width: 992px) {
+// }
+
+// -----xl(Extra Large)-----
+// @media screen and (min-width: 1200px) {
+// }
