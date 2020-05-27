@@ -52,7 +52,7 @@
       }
     }
     h4 {
-      margin: 12px 0 0;
+      margin: 5px 0 0;
       font-size: 16px;
       font-weight: bold;
       letter-spacing: 1px;
@@ -81,22 +81,16 @@
 
   .product {
     grid-template-columns: 1fr;
-    &__item {
-      h4 {
-        margin: 5px 0 0;
-      }
-    }
   }
 }
 
 // -----md(Medium)-----
-// @media screen and (min-width: 768px) {
-// }
+@media screen and (min-width: 577px) and (max-width: 991px) {
+  .product {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 
 // -----lg(Large)-----
 // @media screen and (min-width: 992px) {
-// }
-
-// -----xl(Extra Large)-----
-// @media screen and (min-width: 1200px) {
 // }

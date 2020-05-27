@@ -1,5 +1,5 @@
 .nav {
-  padding: 20px 0;
+  padding: 20px 15px;
   &__wrap {
     max-width: 1000px;
     margin: 0 auto;
@@ -48,13 +48,23 @@
 }
 
 // -----md(Medium)-----
-// @media screen and (min-width: 768px) {
-// }
+@media screen and (min-width: 577px) and (max-width: 991px) {
+  .nav {
+    &__wrap {
+      ul {
+        li {
+          a {
+            letter-spacing: 2px;
+            span {
+              font-size: 11px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 // -----lg(Large)-----
 // @media screen and (min-width: 992px) {
-// }
-
-// -----xl(Extra Large)-----
-// @media screen and (min-width: 1200px) {
 // }
