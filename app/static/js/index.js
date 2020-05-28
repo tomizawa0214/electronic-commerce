@@ -1,4 +1,4 @@
-var loadingWrap = document.getElementById('loadingWrap');
-window.addEventListener('load', function() {
-    loadingWrap.classList.add('loadingNone');
+const loading = document.querySelector('.loading');
+window.addEventListener('load', () => {
+    loading.classList.add('loading__none');
 });
