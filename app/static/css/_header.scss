@@ -1,7 +1,6 @@
 .header {
   width: 100%;
   max-width: 1200px;
-  // height: 120px;
   margin: 10px auto;
   padding: 0;
   img {
@@ -40,10 +39,9 @@
   }
 }
 
-// -----sm(Small)-----
+// -----xs(Extra Small)-----
 @media screen and (max-width: 576px) {
   .header {
-    // height: 200px;
     &__wrap {
       display: flex;
       flex-direction: column;
@@ -54,15 +52,3 @@
     }
   }
 }
-
-// -----md(Medium)-----
-// @media screen and (min-width: 768px) {
-// }
-
-// -----lg(Large)-----
-// @media screen and (min-width: 992px) {
-// }
-
-// -----xl(Extra Large)-----
-// @media screen and (min-width: 1200px) {
-// }

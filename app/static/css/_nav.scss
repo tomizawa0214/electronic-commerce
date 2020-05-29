@@ -28,7 +28,7 @@
   }
 }
 
-// -----sm(Small)-----
+// -----xs(Extra Small)-----
 @media screen and (max-width: 576px) {
   .nav {
     padding-bottom: 0;
@@ -47,8 +47,8 @@
   }
 }
 
-// -----md(Medium)-----
-@media screen and (min-width: 577px) and (max-width: 991px) {
+// -----sm(Small)-----
+@media screen and (min-width: 577px) and (max-width: 767px) {
   .nav {
     &__wrap {
       ul {
@@ -64,7 +64,3 @@
     }
   }
 }
-
-// -----lg(Large)-----
-// @media screen and (min-width: 992px) {
-// }

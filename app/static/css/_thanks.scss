@@ -1,10 +1,12 @@
 .thanks {
   text-align: center;
   margin: 0 0 80px;
-  h1 {
+  p:first-of-type {
+    font-size: 30px;
+    font-weight: bold;
     margin: 0 0 10px;
   }
-  p {
+  p:last-of-type {
     margin: 0 0 30px;
   }
   a {
@@ -13,24 +15,3 @@
     box-shadow: 0 3px 0 #492408;
   }
 }
-
-// -----sm(Small)-----
-@media screen and (max-width: 576px) {
-  .thanks {
-    h1 {
-      font-size: 30px;
-    }
-  }
-}
-
-// -----md(Medium)-----
-// @media screen and (min-width: 768px) {
-// }
-
-// -----lg(Large)-----
-// @media screen and (min-width: 992px) {
-// }
-
-// -----xl(Extra Large)-----
-// @media screen and (min-width: 1200px) {
-// }

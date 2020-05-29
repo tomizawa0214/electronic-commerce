@@ -8,21 +8,20 @@
 
 <form action="." method="POST" id="payment-form">
   <div class="payment row">
-    <div class="payment__wrap col-md-9">
+    <div class="payment__wrap col-md-7 col-lg-8">
       <div class="card rounded-0">
         <div class="card-body">
           <div class="row">
-            <div class="payment__wrap--item col-md-5">
+            <div class="payment__wrap--item col-sm-6 col-md-12 col-lg-5">
               <p>
                 <i class="fas fa-check-circle fa-fw" aria-hidden="true"></i>ご注文者様
               </p>
               <p>お名前　：{{ user_data.first_name }} {{ user_data.last_name }} 様</p>
               <p>ご連絡先：{{ user_data.tel }}</p>
             </div>
-            <div class="payment__wrap--pay col-md-7">
+            <div class="payment__wrap--pay col-sm-6 col-md-12 col-lg-7">
               <p><i class="fas fa-check-circle fa-fw" aria-hidden="true"></i>お支払い方法</p>
               {% csrf_token %}
-              <!-- <div id="card-element"></div> -->
               <label for="card-number">カード番号</label>
               <div id="card-number" class="payment__wrap--pay--number"></div>
               <label for="card-expiry">有効期限（月/年）</label>
@@ -36,7 +35,7 @@
       </div>
     </div>
 
-    <div class="payment__wrap col-md-3">
+    <div class="payment__wrap col-md-5 col-lg-4">
       <div class="card rounded-0">
         <div class="card-body text-center pt-0">
           <p class="payment__wrap--order">ご注文内容</p>
