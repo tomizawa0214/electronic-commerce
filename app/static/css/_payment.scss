@@ -21,8 +21,60 @@
     }
     &--pay {
       display: grid;
+      grid-template-areas:
+        "title title"
+        "label_number label_number"
+        "input_number input_number"
+        "label_expiry label_cvc"
+        "input_expiry input_cvc"
+        "errors errors";
       p:first-child {
         font-weight: bold;
+        grid-area: title;
+      }
+      &--number, &--expiry, &--cvc {
+        height: 40px;
+        padding: 10px 12px;
+        border-radius: 4px;
+        border: 1px solid transparent;
+        box-shadow: 0 1px 3px 0 #e6ebf1;
+        background: #F1F1F1;
+        transition: box-shadow 150ms;
+        &--focus {
+          box-shadow: 0 1px 3px 0 #cfd7df;
+        }
+        &--invalid {
+          border-color: #f00;
+        }
+        &--webkit-autofill {
+          background: #fefde5 !important;
+        }
+      }
+      label:first-of-type {
+        margin: 0;
+        grid-area: label_number;
+      }
+      &--number {
+        grid-area: input_number;
+      }
+      label:nth-of-type(2) {
+        margin: 15px 0 0;
+        grid-area: label_expiry;
+      }
+      &--expiry {
+        width: 90%;
+        grid-area: input_expiry;
+      }
+      label:last-of-type {
+        margin: 15px 0 0;
+        grid-area: label_cvc;
+      }
+      &--cvc {
+        grid-area: input_cvc;
+      }
+      &--errors {
+        color: #f00;
+        grid-area: errors;
       }
     }
     &--order {
@@ -56,30 +108,6 @@
       margin: 0 0 20px;
     }
   }
-}
-
-.StripeElement {
-  background: #F1F1F1;
-  height: 40px;
-  width: 100%;
-  padding: 10px 12px;
-  border-radius: 4px;
-  border: 1px solid transparent;
-  box-shadow: 0 1px 3px 0 #e6ebf1;
-  transition: box-shadow 150ms;
-  &--focus {
-    box-shadow: 0 1px 3px 0 #cfd7df;
-  }
-  &--invalid {
-    border-color: #f00;
-  }
-  &--webkit-autofill {
-    background-color: #fefde5 !important;
-  }
-}
-
-#card-errors {
-  color: #f00;
 }
 
 // -----sm(Small)-----

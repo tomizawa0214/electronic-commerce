@@ -901,10 +901,92 @@ main {
 .payment__wrap--pay {
   display: -ms-grid;
   display: grid;
+      grid-template-areas: "title title" "label_number label_number" "input_number input_number" "label_expiry label_cvc" "input_expiry input_cvc" "errors errors";
 }
 
 .payment__wrap--pay p:first-child {
   font-weight: bold;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: title;
+}
+
+.payment__wrap--pay--number, .payment__wrap--pay--expiry, .payment__wrap--pay--cvc {
+  height: 40px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0 1px 3px 0 #e6ebf1;
+          box-shadow: 0 1px 3px 0 #e6ebf1;
+  background: #F1F1F1;
+  -webkit-transition: -webkit-box-shadow 150ms;
+  transition: -webkit-box-shadow 150ms;
+  transition: box-shadow 150ms;
+  transition: box-shadow 150ms, -webkit-box-shadow 150ms;
+}
+
+.payment__wrap--pay--number--focus, .payment__wrap--pay--expiry--focus, .payment__wrap--pay--cvc--focus {
+  -webkit-box-shadow: 0 1px 3px 0 #cfd7df;
+          box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.payment__wrap--pay--number--invalid, .payment__wrap--pay--expiry--invalid, .payment__wrap--pay--cvc--invalid {
+  border-color: #f00;
+}
+
+.payment__wrap--pay--number--webkit-autofill, .payment__wrap--pay--expiry--webkit-autofill, .payment__wrap--pay--cvc--webkit-autofill {
+  background: #fefde5 !important;
+}
+
+.payment__wrap--pay label:first-of-type {
+  margin: 0;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: label_number;
+}
+
+.payment__wrap--pay--number {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: input_number;
+}
+
+.payment__wrap--pay label:nth-of-type(2) {
+  margin: 15px 0 0;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: label_expiry;
+}
+
+.payment__wrap--pay--expiry {
+  width: 90%;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: input_expiry;
+}
+
+.payment__wrap--pay label:last-of-type {
+  margin: 15px 0 0;
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: label_cvc;
+}
+
+.payment__wrap--pay--cvc {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: input_cvc;
+}
+
+.payment__wrap--pay--errors {
+  color: #f00;
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: errors;
 }
 
 .payment__wrap--order {
@@ -964,38 +1046,6 @@ main {
 
 .payment__wrap button i {
   margin: 0 8px 0 0;
-}
-
-.StripeElement {
-  background: #F1F1F1;
-  height: 40px;
-  width: 100%;
-  padding: 10px 12px;
-  border-radius: 4px;
-  border: 1px solid transparent;
-  -webkit-box-shadow: 0 1px 3px 0 #e6ebf1;
-          box-shadow: 0 1px 3px 0 #e6ebf1;
-  -webkit-transition: -webkit-box-shadow 150ms;
-  transition: -webkit-box-shadow 150ms;
-  transition: box-shadow 150ms;
-  transition: box-shadow 150ms, -webkit-box-shadow 150ms;
-}
-
-.StripeElement--focus {
-  -webkit-box-shadow: 0 1px 3px 0 #cfd7df;
-          box-shadow: 0 1px 3px 0 #cfd7df;
-}
-
-.StripeElement--invalid {
-  border-color: #f00;
-}
-
-.StripeElement--webkit-autofill {
-  background-color: #fefde5 !important;
-}
-
-#card-errors {
-  color: #f00;
 }
 
 @media screen and (max-width: 576px) {
