@@ -62,7 +62,7 @@
     }
     &--shopping {
       @include button;
-      margin: 0 0 30px;
+      margin: 0;
       background: #a85413;
       box-shadow: 0 3px 0 #492408;
     }
@@ -102,9 +102,6 @@
       }
       &--empty {
         text-align: center;
-      }
-      &--shopping {
-        margin: 0;
       }
     }
   }

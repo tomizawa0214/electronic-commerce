@@ -6,34 +6,50 @@ const style = {
     fontSize: '16px',
     color: '#32325d',
   },
+  invalid: { //値が不正のときに文字色を変える
+    color: '#f00',
+    iconColor: '#f00'
+  }
 };
 
 // フォームのidを指定してElementsをマウント
-const card = elements.create('card', { style: style, hidePostalCode: true });
-card.mount('#card-element');
-// const cardNumber = elements.create('cardNumber', {style: style,placeholder: 'カード番号 0000 0000 0000 0000'});
-// cardNumber.mount('#card-number');
-// const cardExpiry = elements.create('cardExpiry',{style: style,placeholder: '有効期限　月/年'});
-// cardExpiry.mount('#card-expiry');
-// const cardCvc = elements.create('cardCvc', {style: style,placeholder: 'セキュリティ番号'});
-// cardCvc.mount('#card-cvc');
+const cardNumber = elements.create('cardNumber', {
+  style: style,
+  placeholder: '0000 0000 0000 0000'
+});
+cardNumber.mount('#card-number');
+
+const cardExpiry = elements.create('cardExpiry',{
+  style: style,
+  placeholder: '00/00'
+});
+cardExpiry.mount('#card-expiry');
+
+const cardCvc = elements.create('cardCvc', {
+  style: style,
+  placeholder: '000'
+});
+cardCvc.mount('#card-cvc');
 
 // カード番号のリアルタイムバリデーション
-card.addEventListener('change', function (event) {
-  const displayError = document.getElementById('card-errors');
-  if (event.error) {
-    displayError.textContent = event.error.message;
-  } else {
-    displayError.textContent = '';
-  }
-});
+const toggle = [cardNumber, cardExpiry, cardCvc];
+for (let i = 0; i < toggle.length; i++) {
+  toggle[i].addEventListener('change', function (event) {
+    const displayError = document.getElementById('card-errors');
+    if (event.error) {
+      displayError.textContent = event.error.message;
+    } else {
+      displayError.textContent = '';
+    }
+  });
+}
 
 // 確定ボタンでエラーをチェック
 const form = document.getElementById('payment-form');
 form.addEventListener('submit', function (event) {
   event.preventDefault();
 
-  stripe.createToken(card).then(function (result) {
+  stripe.createToken(cardNumber, cardExpiry, cardCvc).then(function (result) {
     if (result.error) {
       const errorElement = document.getElementById('card-errors');
       errorElement.textContent = result.error.message;
