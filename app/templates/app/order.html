@@ -6,15 +6,15 @@
 </div>
 
 <div class="order row">
-  <div class="order__wrap col-md-9">
+  <div class="order__wrap col-md-8">
     <div class="card rounded-0">
       <div class="card-body">
         {% for order_item in order.items.all %}
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-sm-3 pr-sm-0">
               <img src="{{ order_item.item.image.url }}" class="img-fluid" alt="{{ order_item.item.title }}">
             </div>
-            <div class="order__wrap--item col-md-6">
+            <div class="order__wrap--item col-sm-4">
               <h5>{{ order_item.item.title }}</h5>
               <p>
                 数量：
@@ -22,14 +22,16 @@
                 {{ order_item.quantity }}
                 <a href="{% url 'additem' order_item.item.slug %}"><span class="badge badge-warning">＋</span></a>
               </p>
-              <a href="{% url 'removeitem' order_item.item.slug %}">
-                <span class="badge badge-danger">取消</span>
-              </a>
+              <div class="order__wrap--item--cancel">
+                <a href="{% url 'removeitem' order_item.item.slug %}">
+                  <span class="badge badge-danger">取消</span>
+                </a>
+              </div>
             </div>
-            <div class="col-md-3">
-              <h6 class="order__wrap--price">
+            <div class="order__wrap--subprice col-sm-5">
+              <h6 class="order__wrap--subprice--chara">
                 小計：
-                <span class="order__wrap--price--num">{{ order_item.get_total_item_price }}</span>
+                <span class="order__wrap--subprice--chara--num">{{ order_item.get_total_item_price }}</span>
                 <span>円(税別)</span>
               </h6>
             </div>
@@ -45,12 +47,12 @@
     </div>
   </div>
 
-  <div class="order__wrap col-md-3">
+  <div class="order__wrap col-md-4">
     <div class="card rounded-0">
       <div class="card-body text-center">
         {% if order.get_subtotal %}
           <h6 class="order__wrap--total">
-            合計：
+            商品合計：
             <span class="order__wrap--total--num">{{ order.get_subtotal }}</span>
             <span>円(税別)</span>
           </h6>

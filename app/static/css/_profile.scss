@@ -26,11 +26,17 @@
       gap: 15px;
     }
     tr:not(:last-of-type) {
+      th {
+        span {
+          font-size: 12px;
+        }
+      }
       td {
         border-bottom: 1px solid #d1dbeb;
       }
     }
     th {
+      width: 180px;
       text-align: left;
       padding: 16px 24px;
       background: #f1f5fa;
